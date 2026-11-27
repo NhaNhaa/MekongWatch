@@ -1,0 +1,80 @@
+{
+  "project": "MekongWatch",
+  "province": "Kratie Province, Cambodia",
+  "data_source": "Microsoft Planetary Computer STAC (free, keyless)",
+  "stac_api": "https://planetarycomputer.microsoft.com/api/stac/v1",
+  "aoi_bbox_wgs84": [
+    105.95,
+    12.26,
+    106.15,
+    12.52
+  ],
+  "grid": {
+    "crs": "EPSG:32648",
+    "west": 603200.0,
+    "south": 1355480.0,
+    "east": 625080.0,
+    "north": 1384340.0,
+    "width": 1094,
+    "height": 1443,
+    "pixel_size_m": 20.0,
+    "pixel_area_m2": 400.0,
+    "total_aoi_area_km2": 631.46
+  },
+  "sentinel2_dry": {
+    "id": "S2C_MSIL2A_20260315T031521_R118_T48PXU_20260315T085410",
+    "date": "2026-03-15",
+    "datetime": "2026-03-15T03:15:21.025000+00:00",
+    "mgrs_tile": "48PXU",
+    "scene_cloud_cover_pct": 0.0,
+    "processing_baseline": "05.12",
+    "reflectance_scale": 0.0001,
+    "reflectance_offset": -1000.0,
+    "bands": [
+      "B02_Blue",
+      "B03_Green",
+      "B04_Red",
+      "B08_NIR",
+      "SCL"
+    ]
+  },
+  "sentinel2_wet": {
+    "id": "S2C_MSIL2A_20261001T031531_R118_T48PXU_20261001T081705",
+    "date": "2026-10-01",
+    "datetime": "2026-10-01T03:15:31.025000+00:00",
+    "mgrs_tile": "48PXU",
+    "scene_cloud_cover_pct": 74.89,
+    "processing_baseline": "05.13",
+    "reflectance_scale": 0.0001,
+    "reflectance_offset": -1000.0,
+    "bands": [
+      "B02_Blue",
+      "B03_Green",
+      "B04_Red",
+      "B08_NIR",
+      "SCL"
+    ]
+  },
+  "sentinel1_dry": {
+    "id": "S1A_IW_GRDH_1SDV_20260414T110347_20260414T110412_064075_08101A_rtc",
+    "date": "2026-04-14",
+    "datetime": "2026-04-14T11:03:59.732446+00:00",
+    "platform": "sentinel-1a",
+    "orbit_state": "ascending",
+    "bands": [
+      "VV",
+      "VH"
+    ]
+  },
+  "sentinel1_wet": {
+    "id": "S1C_IW_GRDH_1SDV_20261017T111116_20261017T111141_009924_013C8F_rtc",
+    "date": "2026-10-17",
+    "datetime": "2026-10-17T11:11:28.589766+00:00",
+    "platform": "sentinel-1c",
+    "orbit_state": "ascending",
+    "bands": [
+      "VV",
+      "VH"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "province": "Kratie Province, Cambodia",
+  "sensor": "Sentinel-1 RTC SAR (Active Radar, VV + VH, ascending orbit)",
+  "crs": "EPSG:32648",
+  "pixel_size_m": 20.0,
+  "dry_date": "2026-04-14",
+  "rainy_date": "2026-10-17",
+  "thresholds": {
+    "water_vv_db": -15.5,
+    "flood_drop_db": -2.5,
+    "min_cluster_pixels": 5
+  },
+  "areas_km2": {
+    "permanent_river_km2": 57.87,
+    "newly_flooded_land_km2": 34.87,
+    "flooded_farmland_km2": 17.79,
+    "dry_land_km2": 538.71,
+    "geoai_predicted_flood_km2": 36.2
+  },
+  "vector_geojson": {
+    "file": "outputs/flood_zones.geojson",
+    "crs": "EPSG:4326",
+    "polygon_count": 1009,
+    "largest_flood_zone_km2": 4.47
+  },
+  "geoai": {
+    "model": "RandomForestClassifier (n_estimators=100, max_depth=12)",
+    "features": [
+      "Optical_Blue",
+      "Optical_Green",
+      "Optical_Red",
+      "Optical_NIR",
+      "SAR_Dry_VV_dB",
+      "SAR_Dry_VH_dB",
+      "SAR_Wet_VV_dB",
+      "SAR_Wet_VH_dB"
+    ],
+    "train_samples": 8400,
+    "test_samples": 3600,
+    "sampled_per_class": {
+      "Dry Land": 4000,
+      "Permanent Mekong River": 4000,
+      "Newly Flooded Land": 4000
+    },
+    "overall_accuracy": 0.9928,
+    "macro_f1": 0.9928,
+    "confusion_matrix": [
+      [
+        1196,
+        1,
+        3
+      ],
+      [
+        0,
+        1189,
+        11
+      ],
+      [
+        0,
+        11,
+        1189
+      ]
+    ],
+    "class_labels": [
+      "Dry Land",
+      "Permanent Mekong River",
+      "Newly Flooded Land"
+    ],
+    "feature_importances": {
+      "Optical_Blue": 0.0171,
+      "Optical_Green": 0.0188,
+      "Optical_Red": 0.03,
+      "Optical_NIR": 0.1888,
+      "SAR_Dry_VV_dB": 0.1248,
+      "SAR_Dry_VH_dB": 0.1161,
+      "SAR_Wet_VV_dB": 0.2759,
+      "SAR_Wet_VH_dB": 0.2284
+    }
+  },
+  "ground_truthing_note": "Seed training pixels come from multi-sensor SAR physics (dry vs. rainy backscatter). In real disaster deployment, Human-in-the-Loop Ground-Truthing is essential to verify dark radar false positives (such as smooth asphalt roads, wet bare soil, or flat roofs) against field photos, river-gauge readings, or local NCDM reports."
+}

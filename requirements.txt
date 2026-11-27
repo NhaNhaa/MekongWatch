@@ -1,0 +1,11 @@
+rasterio
+pyproj
+pystac-client
+planetary-computer
+numpy
+scipy
+scikit-learn
+shapely
+matplotlib
+streamlit
+pytest

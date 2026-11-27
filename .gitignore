@@ -1,0 +1,35 @@
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets & environment variables
+.env
+.env.*
+
+# Large raw satellite GeoTIFF rasters (reproducible via `python fetch_data.py`)
+data/*.tif
+data/*.tiff
+data/*.jp2
+
+# Intermediate binary masks & large generated vector outputs (reproducible via phase1/phase2 scripts)
+outputs/*.npy
+outputs/*.geojson
+
+# Personal interview prep notes (keep local)
+INTERVIEW_CHEATSHEET.md
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

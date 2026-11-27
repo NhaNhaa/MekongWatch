@@ -1,0 +1,41 @@
+{
+  "province": "Kratie Province, Cambodia",
+  "sensor": "Sentinel-2 L2A (Optical / Passive Sensor)",
+  "crs": "EPSG:32648",
+  "pixel_size_m": 20.0,
+  "pixel_area_m2": 400.0,
+  "raster_shape": [
+    1443,
+    1094
+  ],
+  "corners_wgs84": {
+    "top_left": {
+      "lat": 12.5209,
+      "lon": 105.94984
+    },
+    "bottom_right": {
+      "lat": 12.25918,
+      "lon": 106.15005
+    }
+  },
+  "total_aoi_area_km2": 631.46,
+  "dry_season": {
+    "date": "2026-03-15",
+    "scene_id": "S2C_MSIL2A_20260315T031521_R118_T48PXU_20260315T085410",
+    "aoi_cloud_cover_pct": 0.0,
+    "aoi_clear_pct": 100.0,
+    "ndwi_threshold": 0.05,
+    "ndvi_threshold": 0.35,
+    "normal_river_area_km2": 56.83,
+    "healthy_farmland_area_km2": 345.62,
+    "median_river_ndwi": 0.385,
+    "median_farmland_ndvi": 0.605
+  },
+  "rainy_season": {
+    "date": "2026-10-01",
+    "scene_id": "S2C_MSIL2A_20261001T031531_R118_T48PXU_20261001T081705",
+    "aoi_cloud_cover_pct": 52.32,
+    "aoi_clear_pct": 47.68,
+    "optical_blocked_note": "52.3% of the Kratie AOI is blocked by monsoon clouds/shadows in Sentinel-2 on 2026-10-01, motivating Phase 2 SAR radar."
+  }
+}
